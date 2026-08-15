@@ -1,0 +1,1 @@
+give @s arrow-railgun:arrow_railgun
