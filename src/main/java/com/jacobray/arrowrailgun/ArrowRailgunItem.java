@@ -2,6 +2,7 @@ package com.jacobray.arrowrailgun;
 
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.InteractionHand;
@@ -11,12 +12,20 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.arrow.Arrow;
 import net.minecraft.world.item.FishingRodItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.ChatFormatting;
 import net.minecraft.world.level.Level;
 
 public class ArrowRailgunItem extends FishingRodItem {
 
     public ArrowRailgunItem(Item.Properties properties) {
         super(properties);
+    }
+
+    @Override
+    public Component getName(ItemStack stack) {
+        return Component.literal("Arrow Railgun")
+                .withStyle(ChatFormatting.RED);
     }
 
     @Override
@@ -35,7 +44,7 @@ public class ArrowRailgunItem extends FishingRodItem {
                         )
                 );
 
-        for (int i = 0; i < 500; i++) {
+        for (int i = 0; i < 300; i++) {
 
             ArrowRailgunArrow arrow =
                     new ArrowRailgunArrow(arrowType, level);
@@ -53,7 +62,7 @@ public class ArrowRailgunItem extends FishingRodItem {
                     player.getXRot(),
                     player.getYRot(),
                     0.0F,
-                    20.0F,
+                    1500.0F,
                     0.15F
             );
 
