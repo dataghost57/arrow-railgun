@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "#H#",
+    "#/#",
+    "#N#"
+  ],
+  "key": {
+    "#": "minecraft:totem_of_undying",
+    "H": "minecraft:heavy_core",
+    "/": "minecraft:fishing_rod",
+    "N": "minecraft:nether_star"
+  },
+  "result": {
+    "id": "item.arrow-railgun.arrow_railgun"
+  }
+}
