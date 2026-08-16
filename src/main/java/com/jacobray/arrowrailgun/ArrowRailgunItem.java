@@ -9,10 +9,11 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.arrow.Arrow;
+import net.minecraft.world.item.FishingRodItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
 
-public class ArrowRailgunItem extends Item {
+public class ArrowRailgunItem extends FishingRodItem {
 
     public ArrowRailgunItem(Item.Properties properties) {
         super(properties);
@@ -22,7 +23,8 @@ public class ArrowRailgunItem extends Item {
     public InteractionResult use(Level level, Player player, InteractionHand hand) {
 
         if (level.isClientSide()) {
-            return InteractionResult.PASS;
+            player.startUsingItem(hand);
+            return InteractionResult.SUCCESS;
         }
 
         EntityType<? extends Arrow> arrowType =
@@ -33,7 +35,7 @@ public class ArrowRailgunItem extends Item {
                         )
                 );
 
-        for (int i = 0; i < 300; i++) {
+        for (int i = 0; i < 500; i++) {
 
             ArrowRailgunArrow arrow =
                     new ArrowRailgunArrow(arrowType, level);
@@ -51,12 +53,14 @@ public class ArrowRailgunItem extends Item {
                     player.getXRot(),
                     player.getYRot(),
                     0.0F,
-                    1500.0F,
+                    20.0F,
                     0.15F
             );
 
             level.addFreshEntity(arrow);
         }
+
+        player.startUsingItem(hand);
 
         return InteractionResult.SUCCESS;
     }
