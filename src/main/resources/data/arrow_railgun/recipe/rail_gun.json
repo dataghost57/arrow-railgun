@@ -13,6 +13,6 @@
     "N": "minecraft:nether_star"
   },
   "result": {
-    "id": "item.arrow-railgun.arrow_railgun"
+    "id": "arrow-railgun:arrow_railgun"
   }
 }
