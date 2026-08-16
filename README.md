@@ -1,9 +1,1 @@
-# Arrow Railgun
-
-## Setup
-
-For setup instructions, please see the [Fabric Documentation page](https://docs.fabricmc.net/develop/getting-started/creating-a-project#setting-up) related to the IDE that you are using.
-
-## License
-
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+If your friends are acting up then this is the perfect mod for you! Even if your on survival you can still craft it. The arrow railgun shoots 300 arrows at 1500% speed! It has been tested by professional Minecraft players and can one-shot a warden!
