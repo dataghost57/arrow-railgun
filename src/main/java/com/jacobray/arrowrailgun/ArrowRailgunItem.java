@@ -33,9 +33,10 @@ public class ArrowRailgunItem extends Item {
                         )
                 );
 
-        for (int i = 0; i < 500; i++) {
+        for (int i = 0; i < 300; i++) {
 
-            Arrow arrow = new Arrow(arrowType, level);
+            ArrowRailgunArrow arrow =
+                    new ArrowRailgunArrow(arrowType, level);
 
             arrow.setOwner(player);
 
@@ -50,7 +51,7 @@ public class ArrowRailgunItem extends Item {
                     player.getXRot(),
                     player.getYRot(),
                     0.0F,
-                    20.0F,
+                    1500.0F,
                     0.15F
             );
 
